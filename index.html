@@ -137,28 +137,25 @@
         <br>
         
     </div>
-    
-    <audio id="mySong" src="Got.mp3" loop type="audio/mp3"></audio>
+<!-- "Audio (Theme Song)": When the button is clicked, the audio will play. -->
+    <audio id="mySong" src="Got.mp3"  loop  type="audio/mp3" ></audio>
+    <script>
+        var mySong = document.getElementById("mySong");
+        var icon = document.getElementById("icon");
 
-   <script>
-  var mySong = document.getElementById("mySong");
-  var icon = document.getElementById("icon");
+        icon.onclick = function(){
+            if (mySong.paused) {
+                mySong.play();
+                icon.src = "iconsilver.png";
+            }
+            else {
+                mySong.pause();
+                icon.src = "iconred.png";
 
-  window.addEventListener("DOMContentLoaded", function() {
-    mySong.play();
-    icon.src = "iconsilver.png";
-  });
+            }
+        }
 
-  icon.onclick = function() {
-    if (mySong.paused) {
-      mySong.play();
-      icon.src = "iconsilver.png";
-    } else {
-      mySong.pause();
-      icon.src = "iconred.png";
-    }
-  };
-</script>
+    </script>
 
 </body>
 </html>
