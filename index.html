@@ -138,24 +138,27 @@
         
     </div>
     
-    <audio id="mySong" src="Got.mp3"  loop  type="audio/mp3" ></audio>
-    <script>
-        var mySong = document.getElementById("mySong");
-        var icon = document.getElementById("icon");
+    <audio id="mySong" src="Got.mp3" loop type="audio/mp3"></audio>
 
-        icon.onclick = function(){
-            if (mySong.paused) {
-                mySong.play();
-                icon.src = "iconsilver.png";
-            }
-            else {
-                mySong.pause();
-                icon.src = "iconred.png";
+   <script>
+  var mySong = document.getElementById("mySong");
+  var icon = document.getElementById("icon");
 
-            }
-        }
+  window.addEventListener("DOMContentLoaded", function() {
+    mySong.play();
+    icon.src = "iconsilver.png";
+  });
 
-    </script>
+  icon.onclick = function() {
+    if (mySong.paused) {
+      mySong.play();
+      icon.src = "iconsilver.png";
+    } else {
+      mySong.pause();
+      icon.src = "iconred.png";
+    }
+  };
+</script>
 
 </body>
 </html>
